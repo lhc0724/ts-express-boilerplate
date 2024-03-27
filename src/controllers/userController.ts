@@ -1,18 +1,20 @@
 import { RequestHandler } from 'express';
-import { AppDataSource } from '../../data-source';
-import { User } from '../models';
+import { UserService } from '../services';
 
-export const getUsers: RequestHandler = async (req, res) => {
-  const userRepository = AppDataSource.getRepository(User);
-  const users = await userRepository.find();
+class UserController {
+  public userService = new UserService();
 
-  return res.status(200).json({ data: users });
-};
+  public getUsers: RequestHandler = async(req, res) => {
+    const data = this.userService.getAll();
+    return res.status(200).json({data});
+  }
 
-export const getUserById: RequestHandler = async (req, res) => {
-  const { id } = req.params;
-  const userRepository = AppDataSource.getRepository(User);
-  const user = await userRepository.findOne({ where: { id: id } });
+  public getUserById: RequestHandler = async(req, res) => {
+    const {id} = req.params;
+    const data = this.userService.getById(id);
 
-  return res.status(200).json({ data: user });
-};
+    return res.status(200).json({data});
+  }
+}
+
+export default UserController;

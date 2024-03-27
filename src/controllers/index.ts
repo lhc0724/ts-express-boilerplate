@@ -1,4 +1,4 @@
 import * as healthController from './healthController';
-import * as userController from './userController';
+import UserController from './userController';
 
-export { healthController, userController };
+export { healthController, UserController };

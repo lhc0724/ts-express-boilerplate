@@ -1,7 +1,9 @@
 import express from 'express';
-import { userController } from '../controllers';
+import { UserController } from '../controllers';
 
 const userRouter = express.Router();
+const userController = new UserController();
+
 userRouter.get('/', userController.getUsers);
 userRouter.get('/:id', userController.getUserById);
 
