@@ -7,9 +7,5 @@ export const checkHealth: RequestHandler = (req, res) => {
 		date: new Date()
 	}
 
-	res.status(200).send(data);
+	return res.status(200).send(data);
 }
-
-export const test: RequestHandler = (req, res) => {
-  res.status(200).send();
-};
