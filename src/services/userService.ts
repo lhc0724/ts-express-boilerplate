@@ -13,7 +13,7 @@ export default class UserService {
     return await this.userRepository.find();
   }
 
-  async getById(id: string): Promise<User | null> {
+  async getById(id: number): Promise<User | null> {
     return await this.userRepository.findOne({ where: { id: id } });
   }
 }

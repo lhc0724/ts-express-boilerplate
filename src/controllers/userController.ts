@@ -10,8 +10,8 @@ class UserController {
   }
 
   public getUserById: RequestHandler = async(req, res) => {
-    const {id} = req.params;
-    const data = this.userService.getById(id);
+    const { id } = req.params;
+    const data = this.userService.getById(parseInt(id));
 
     return res.status(200).json({data});
   }
