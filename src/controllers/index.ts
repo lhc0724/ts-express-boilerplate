@@ -1,3 +1,3 @@
-import * as health from './health';
+import * as healthController from './health';
 
-export default { health };
+export { healthController };

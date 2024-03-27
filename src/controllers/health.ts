@@ -9,3 +9,7 @@ export const checkHealth: RequestHandler = (req, res) => {
 
 	res.status(200).send(data);
 }
+
+export const test: RequestHandler = (req, res) => {
+  res.status(200).send();
+};
