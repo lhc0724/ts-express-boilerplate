@@ -1,0 +1,48 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
+  "extends": [
+    "airbnb-base",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "eslint:recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["import", "@typescript-eslint", "prettier"],
+  "rules": {
+    "import/no-unresolved": "off",
+    "linebreak-style": 0,
+    "import/prefer-default-export": 0,
+    "comma-dangle": "off",
+    "arrow-parens": "off",
+    "no-plusplus": "off",
+    "no-param-reassign": "error",
+    "no-unused-vars": "error",
+    "no-debugger": "warn",
+    "no-console": "error",
+    "no-void": "error",
+    "implicit-arrow-linebreak": "off",
+    "arrow-body-style": "off",
+    "no-use-before-define": "off",
+    "no-confusing-arrow": "off",
+    "operator-linebreak": "off",
+    "import/no-extraneous-dependencies": "off",
+    "object-curly-newline": "off",
+    "lines-between-class-members": [
+      "error",
+      "always",
+      {
+        "exceptAfterSingleLine": true
+      }
+    ]
+  }
+}
